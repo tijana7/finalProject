@@ -1,0 +1,23 @@
+.social-wrapper{
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+  
+}
+.social-wrapper a {
+display: block;
+text-align: center;
+padding: 5px;
+transition: all 0.3s ease;
+color: black;
+font-size: 15px;
+}
+
+.social-wrapper a:hover {
+background-color: #666699;
+}

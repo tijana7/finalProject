@@ -1,0 +1,34 @@
+<br><br>
+
+<body>
+  <div class="bg-img">
+    <form (ngSubmit)="onFormSubmit(logInForm)" #logInForm="ngForm" class="col-4">
+      <h1 style="text-align: center;">Log In</h1>
+      <h6 style="text-align: center;">New to this site? <a style="text-decoration: underline;color: black;"
+          routerLink="/sign-up">Sign Up</a></h6>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input id="email" class="form-control" type="email" ngModel name="email" required email #email="ngModel">
+        <span class="text-danger" *ngIf="!email.valid && email.touched">
+          <span *ngIf="email.errors?.['required']">Email is required.</span>
+      </span>
+      </div>
+      
+      <div class="form-group">
+         <label class="form-label" for="password" style="margin-bottom: 2px;" >Password</label>
+        <input class="form-control" type="password" [ngModel]="user.password" name="password" required minlength="5" password #password="ngModel">
+        <span *ngIf="password.errors && password.touched">
+          Password must be at least 5 characters long.
+        </span>
+        
+      </div>
+
+      <br>
+      <h6 style="margin-bottom: 10px;">Forgot password?</h6>
+
+      <div class="d-grid gap-2">
+        <button [disabled]="!logInForm.valid" type="submit" class="btn btn-light">Log In</button>
+      </div>
+    </form>
+  </div>
+</body>

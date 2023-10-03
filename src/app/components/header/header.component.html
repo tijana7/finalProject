@@ -1,0 +1,42 @@
+<div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" routerLink="/"><img src="assets\imgs\flowerLogo.png" alt="flowerLogo"
+                    style="max-width: 100px; max-height: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Linkovi i ikonice -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbars">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#" routerLink="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/products"
+                            class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <!-- ikonice -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#"><fa-icon class="fa-1x"
+                                [icon]="faUser"></fa-icon></a></li>
+                    <li class="nav-item"><a class="nav-link active" routerLink="/log-in">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><fa-icon class="fa-1x"
+                                [icon]="faCart"></fa-icon><span
+                                class="badge rounded-pill badge-notification bg-secondary"
+                                style="font-size: 8px;">1</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>

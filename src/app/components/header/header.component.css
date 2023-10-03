@@ -1,0 +1,20 @@
+.nav-link {
+    color: black;
+    margin: 0 15px;
+    font-size: 16px;
+  }
+  
+  .nav-link:hover {
+    color: #666699;
+  }
+  
+  .badge {
+    position: relative;
+    top: -4px;
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  
+  .nav-link i {
+    font-size: 18px;
+  }

@@ -1,0 +1,38 @@
+<router-outlet></router-outlet>
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-evenly" style="padding: 10px;">
+      <div *ngFor="let category of allCategories" class="col-lg-3 col-md-3 col-sm-3" style="padding: 8px;cursor: pointer;"
+        (click)="selectCategory(category.name)">
+        <p class="text-center">{{category.name}}</p>
+        <img class="img-fluid border-bottom-category w-100" [src]="category.imgSrc"
+          style="border-bottom: 5px solid palevioletred;">
+      </div>
+    </div>
+    <div>
+      <br><br>
+
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="d-flex flex-wrap">
+            <div *ngFor="let product of allProducts" class="col-lg-4 col-md-6 col-sm-12 mb-4 p-2"
+              style="cursor: pointer;">
+              <div class="card product-item h-100">
+                <a style="cursor: pointer;" >
+                  <img [routerLink]="['/product-detail', product.id]" class="card-img-top border-bottom-category" [src]="product.imgSrc"> <!-- navigacije ima neku gresku -->
+                  <div class="card-body flex-fill d-flex flex-column">
+                    <h5 class="card-title text-center">{{product.name}}</h5>
+                    <p class="card-text text-center">{{product.price}}$</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>

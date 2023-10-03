@@ -1,0 +1,147 @@
+<!-- Home image -->
+<div class="container-fluid m-0 p-0 overflow-hidden">
+    <div class="top-img position-relative">
+      <div class="right-text">
+        <h1 class="text-dark">March into Spring!</h1>
+        <h5 class="text-dark">Bring the meadow to them with a daisy bouquet.</h5>
+        <button type="button" class="btn btn-secondary" routerLink="/products">SHOP FLOWERS</button>
+      </div>
+    </div>
+  
+  
+  
+    <br>
+  
+    <!-- About text -->
+  
+    <div class="container">
+      <div class="col-md-auto">
+        
+          Established in 1910, FTD has been premier provider of beautiful floral arrangements and gorgeous mixed
+          flower
+          bouquets for over 100 years. Whatever the occasion, our evergreen collection of colourful stems, blossoming
+          plants and fragrant arrangements have warmed hearts all across the country with our flower delivery
+          services.
+          At FTD, we celebrate the little things in life and cherish the timeless charm a single flower embodies.
+          From birthday flowers to sympathy flowers, all of our hand-picked flower arrangements are worth more than a
+          thousand words.
+          <br>
+          <br>
+          Our sprawling network of florists is chock-full of experts green thumbs with an eye for elegance and
+          perfection.
+          As one of the largest and most trusted online floral retailers in the world, we make the world, we take
+          immense pride in our industry-leading title. Delivering quality, innovation, creative artistry and
+          dependability,
+          FTD is much more than just an online flower delivery service.
+        <br><br>
+      </div>
+    </div>
+  
+  
+    <!-- Gallery -->
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-4" *ngFor="let category of homeProducts">
+          <div class="card text-center">
+            <img [src]="category.imgSrc" class="card-img-top" alt="Category Image">
+            <div class="card-body">
+              <h5 class="card-title">{{ category.name }}</h5>
+              <p class="card-text">{{ category.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row justify-content-evenly">
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-outline-secondary" routerLink="/products">Load more</button>
+      </div>
+    </div>
+    <br><br>
+    <!-- Info and form -->
+  
+    <div class="container">
+      <div class="row justify-content-evenly ">
+        <div class="col-md-4 flex-md-column">
+          <p>Send as a message</p>
+          <p>A: Laze Nancica 7, 21000 Novi Sad</p>
+          <p>T: 021/422-022</p>
+          <p>office@smartinit.net</p>
+  
+          <br>
+          <p>MON-FRI: 7am - 10pm</p>
+          <p>SATURDAY: 8am - 10pm</p>
+          <p>SUNDAY: -</p>
+  
+          <br>
+          <p><a>FAQ /</a></p>
+          <p><a>Shipping & Returns /</a></p>
+          <p><a>Store Policy /</a></p>
+          <p><a>Payment Methods /</a></p>
+        </div>
+        <div class="col-md-4 flex-md-column">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input  id="name" type="text" class="form-control no-radius-border" ngModel name="name">
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email" class="form-control no-radius-border" ngModel name="email">
+            </div>
+            <div class="col-12">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control no-radius-border" id="subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control no-radius-border"  ngModel name="message" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" style="color: #000; background-color:#fff;margin-left: 10px;padding-left: 10px;padding-right: 10px;">Send</button>
+            </div>
+          </form>
+  
+          <br>
+  
+          <!-- Form for newsletters -->
+          <form class="row g-3">
+            <div class="col-auto">
+              <label for="newslettersEmail">Get our newsletters</label><br>
+              <input type="password" class="inputbox" id="newslettersEmail" style="border-color: #000;"
+                placeholder="Enter your email here">
+              <button type="submit" style="color: #fff; background-color:#000;margin-left: 10px;padding: 5px;">Subscribe
+                Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  
+    <br>
+  
+    <!--BOTTOM SECTION-->
+    <div class="bottom-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 p-0">
+            <div class="bottom-part-1 text-light position-relative align-self-center"  style="background-color: #fb929e;">
+              <div class="centered-text d-flex align-items-center flex-column">
+                <h1 class="text-light">Send Get Well Wishes</h1>
+                <h5 class="text-light" style="text-align: center;">Brighten their recovery with feautiful florals, plants
+                  and
+                  gifts that will express your well wishes.</h5>
+                <button type="button" class="btn btn-secondary rounded-pill" routerLink="/products">SHOP GET WELL FLOWERS & GIFTS</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 p-0">
+            <div class="bottom-part-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
