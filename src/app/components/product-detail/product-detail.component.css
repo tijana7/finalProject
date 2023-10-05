@@ -4,26 +4,23 @@ ul.breadcrumb {
 
   }
   
-  /* Display list items side by side */
   ul.breadcrumb li {
     display: inline;
     font-size: 16px;
   }
   
-  /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
   }
   
-  /* Add a color to all links inside the list */
+
   ul.breadcrumb li a {
     color: #666699;
     text-decoration: none;
   }
-  
-  /* Add a color on mouse-over */
+
   ul.breadcrumb li a:hover {
     color: #666699;
     text-decoration: underline;
@@ -37,9 +34,20 @@ ul.breadcrumb {
   .sticky-footer {
     position: sticky;
     bottom: 0;
-    background-color: #333; /* Prilagodite boju pozadine prema vašim potrebama */
-    color: #fff; /* Prilagodite boju teksta prema vašim potrebama */
-    padding: 10px; /* Dodajte željeni razmak između sadržaja footera i rubova */
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
   }
+
+@media (max-width: 767px) {
+  .col-lg-4 {
+    width: 100%; 
+  }
+  .col-lg-4 img {
+    max-width: 100%;
+    height: auto; 
+  }
+}
+
 
  

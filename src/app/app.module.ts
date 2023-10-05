@@ -12,9 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { SingUpComponent } from './components/sign-up/sing-up.component';
-import { UserService } from './services/userService';
 import { AboutComponent } from './components/about/about.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
+import { CartComponent } from './components/cart/cart.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -28,10 +30,12 @@ import { AboutComponent } from './components/about/about.component';
     ProductsComponent,
     LogInComponent,
     ProductDetailComponent,
-    SingUpComponent,
     AboutComponent,
+    OrdersComponent,
+    PaymentDetailsComponent,
+    SignUpComponent,
+    CartComponent
 
-    
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,41 @@
+<div  *ngIf="cartItems">
+<div *ngIf="cartItems.length" class="pb-5 px-2">
+    <div id="accordion">
+        <div class="card" *ngFor="let cartItem of cartItems">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapseOne'+cartItem.productId" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        {{cartItem.productName}}
+                    </button>
+                </h5>
+            </div>
+    
+            <div [id]="'collapseOne'+cartItem.productId" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordion">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <img [src]="cartItem.productImgSrc" [alt]="cartItem.productName" width="80">
+                        <span>{{cartItem.productPrice}}</span>
+                        <input type="number" [value]="cartItem.quantity" min="1" max="99"
+                            (change)="recalculateQuantity($event, cartItem)">
+                        <span>{{cartItem.totalPrice}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <div>
+            <h3>TOTAL: {{totalPrice}}</h3> <br>
+            <button class="btn btn-primary" (click)="submitOrder()">SUBMIT</button>
+        </div>
+    </div>
+</div>
+</div>
+<div *ngIf="cartItems.length == 0">
+    <br><br><br><br><br>
+    <h1 class="text-center">Shopping cart is empty</h1>
+</div>

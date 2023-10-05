@@ -235,5 +235,41 @@
             "price": 80,
             "description": "The Light of My Life Bouquet blossoms with brilliant color and a sweet sophistication to create the perfect impression! Pink Lilies make the eyes dance across the unique design of this flower bouquet, surrounded by the blushing colors of orange roses, lavender cushion poms, hot pink carnations, and lush greens. Presented in a clear glass vase, this fresh flower arrangement has been created just for you to help you send your sweetest thank you, happy anniversary, or thinking of you wishes."
           }
+    ],
+    "cart": [
+      {
+        "data": [{}],
+        "id": 1
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "date": "1 1693589443769",
+        "totalPrice": 1810,
+        "nameSurname": "Zorana  Zaric ",
+        "email": "zorana.zaric@panonit.com"
+      },
+      {
+        "id": 2,
+        "date": "1 1693589544404",
+        "totalPrice": 1810,
+        "nameSurname": "Zorana  Zaric ",
+        "email": "zorana.zaric@panonit.com"
+      },
+      {
+        "id": 3,
+        "date": "4 1696425477163",
+        "totalPrice": 870,
+        "nameSurname": " ",
+        "email": ""
+      },
+      {
+        "id": 4,
+        "date": "4 1696426298537",
+        "totalPrice": 980,
+        "nameSurname": " ",
+        "email": ""
+      }
     ]
 }

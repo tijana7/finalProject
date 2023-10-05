@@ -1,12 +1,18 @@
 .bg-img {
     background-image: url("/assets/imgs/loginBackground.jpg");
     max-width: 100%;
-    min-height: 1400px;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  span{
+    color: red;
+    font-size: 10px;
+  }

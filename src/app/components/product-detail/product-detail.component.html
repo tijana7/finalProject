@@ -10,25 +10,28 @@
       <li>{{productData.name}}</li>
     </ul>
     <ul class="pagination col-auto" style="padding: 10px 16px;">
-      <a [routerLink]="['/products', productData.id]">&laquo; Prev</a>
+      <a>&laquo; Prev</a>
       <pre> | </pre>
-      <a [routerLink]="['/products', productData.id]">Next &raquo;</a>
+      <a>Next &raquo;</a>
     </ul>
   </div>
   <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 col-sm-12" >
-      <img class="rounded float-end" [src]="productData.imgSrc">
-    </div>
-    <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+      <img class="rounded" [src]="productData.imgSrc" style="margin: auto;">
+    </div>    
+    <div class="col-lg-4 col-md-12">
       <h2>{{productData.name}}</h2>
       <h2>{{productData.price}} $</h2>
       <p>{{productData.description}}</p>
       <hr>
+      <div class="form-group col-md-2">
       <label for="quantity">Quantity</label>
-      <br>
-      <input name="quantity" id="quantity" type="number">
-      <br>
-   
-      <button class="btn btn-dark" style="margin-top: 3px;">Add to cart</button>
+      <input class="form-control" name="quantity" id="quantity" type="number" min="1" max="99">
     </div>
-  </div></div>
+    <br>
+
+      <button class="btn btn-dark" style="margin-top: 3px;" (click)="addProductToCart()" >Add to cart</button>
+      <br><br><br>
+    </div>
+  </div>
+</div>

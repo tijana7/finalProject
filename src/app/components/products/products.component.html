@@ -3,11 +3,11 @@
 <div class="container">
   <div class="row">
     <div class="col d-flex justify-content-evenly" style="padding: 10px;">
-      <div *ngFor="let category of allCategories" class="col-lg-3 col-md-3 col-sm-3" style="padding: 8px;cursor: pointer;"
+      <div *ngFor="let category of allCategories" class="col-lg-2 col-md-2" style="padding: 8px;cursor: pointer;"
         (click)="selectCategory(category.name)">
         <p class="text-center">{{category.name}}</p>
         <img class="img-fluid border-bottom-category w-100" [src]="category.imgSrc"
-          style="border-bottom: 5px solid palevioletred;">
+          style="border-bottom: 3px solid palevioletred;">
       </div>
     </div>
     <div>

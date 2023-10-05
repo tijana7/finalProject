@@ -1,0 +1,57 @@
+<br><br>
+
+<body>
+    <div class="bg-img">
+        <div class="col-3">
+            <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
+                <h1 style="text-align: center;">Sign In</h1>
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" class="form-control" ngModel name="firstName" required
+                        minlength="5" firstName #firstName="ngModel">
+                    <span *ngIf="firstName.errors && firstName.touched">
+                        Name is required.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" class="form-control" ngModel name="lastName" required minlength="5"
+                        lastName #lastName="ngModel">
+                    <span *ngIf="lastName.errors && lastName.touched">
+                        Surname is required.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" ngModel name="email" required email
+                        #email="ngModel">
+                    <span class="text-danger" *ngIf="!email.valid && email.touched">
+                        <span *ngIf="email.errors?.['required']">Email is required.</span>
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" style="margin-bottom: 2px;">Password</label>
+                    <input id="password" type="password" class="form-control" ngModel name="password" required
+                        minlength="5" password #password="ngModel">
+                    <span *ngIf="password.errors && password.touched">
+                        Password is required.
+                    </span>
+                </div>
+
+                <br>
+                <h6 style="margin-bottom: 10px;font-weight: normal;"><a style="cursor: pointer;">Forgot password?</a>
+                </h6>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-light">Log In</button>
+                    <h6>Already a member? <a style="text-decoration: underline;color: black;" routerLink="/log-in">Log
+                            In</a></h6>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

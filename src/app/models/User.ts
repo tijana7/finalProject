@@ -1,6 +1,11 @@
-export class User{
-    email: string;
-    password: string;
-    firstName: string;
-    lastName: string;
+export class User {
+    public firstName: string;
+    public lastName: string;
+    public email: string;
+    public password?: string;
+    public phoneNumber?: string;
+    public address: string;
+    public comment?: string;
+    public paymentMethod?:string;
+
 }

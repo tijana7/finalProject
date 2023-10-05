@@ -1,4 +1,4 @@
-export interface Order{
+export interface Order {
     id: number;
     date: string;
     totalPrice: number;
