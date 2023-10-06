@@ -16,11 +16,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName">Last Name</label>
+                    <label for="lastName">Last name</label>
                     <input id="lastName" type="text" class="form-control" ngModel name="lastName" required minlength="5"
                         lastName #lastName="ngModel">
                     <span *ngIf="lastName.errors && lastName.touched">
-                        Surname is required.
+                        Last name is required.
                     </span>
                 </div>
 
@@ -47,7 +47,7 @@
                 </h6>
 
                 <div class="d-grid gap-2">
-                    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-light">Log In</button>
+                    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-light" (click)="signUp(email.value, password.value); onSubmit()">Sign In</button>
                     <h6>Already a member? <a style="text-decoration: underline;color: black;" routerLink="/log-in">Log
                             In</a></h6>
                 </div>

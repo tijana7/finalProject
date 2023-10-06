@@ -16,6 +16,12 @@ import { AboutComponent } from './components/about/about.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
+import { environment } from './environments';
 
 
 
@@ -41,7 +47,12 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/models/Order';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/cartService';
 
 @Component({
   selector: 'app-payment-details',

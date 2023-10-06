@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/authService';
 
 @Component({
   selector: 'app-log-in',
@@ -8,17 +9,26 @@ import { NgForm } from '@angular/forms';
 })
 export class LogInComponent implements OnInit {
   @ViewChild('logInForm') singupForm: NgForm;
-  
 
-  constructor(){
-}
-
+  constructor(
+    private authService: AuthService
+  ) {
+  }
+  isLogedIn = false;
   ngOnInit(): void {
-    
+
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.singupForm);
+  }
+
+  signIn(email: string, password: string) {
+    this.authService.signIn(email, password);
+  }
+
+  signOut(){
+    this.authService.signOut();
   }
 }
 

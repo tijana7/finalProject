@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faUserCircle, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/cartService';
 
 @Component({
   selector: 'app-header',

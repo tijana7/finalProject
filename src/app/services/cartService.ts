@@ -12,6 +12,7 @@ import { Order } from '../models/Order';
 export class CartService {
 
   shopCartNumberSubject = new Subject<number>();
+  
   shopCartNumber = 0;
 
   cart: CartItem[] = [];
@@ -62,6 +63,8 @@ export class CartService {
     this.shopCartNumberSubject.next(this.shopCartNumber);
     return this._httpClient.put(baseUrl+"cart/1", {data: []});
   }
+
+  
     }
   
   

@@ -11,7 +11,7 @@
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" class="form-control" type="email" ngModel name="email" required email="" #email="ngModel">
+          <input id="email" class="form-control" type="email" ngModel name="email" required email #email="ngModel">
           <span class="text-danger" *ngIf="!email.valid && email.touched">
             <span *ngIf="email.errors?.['required']">Email is required.</span>
           </span>
@@ -30,7 +30,11 @@
         <h6 style="margin-bottom: 10px;">Forgot password?</h6>
 
         <div class="d-grid gap-2">
-          <button type="submit" [disabled]="!logInForm.valid" class="btn btn-light">Log In</button>
+
+          <button type="submit" *ngIf="!isLogedIn" [disabled]="!logInForm.valid" class="btn btn-light"
+            (click)="signIn(email.value, password.value); onSubmit()">Log In</button>
+          <button type="submit" *ngIf="isLogedIn" [disabled]="!logInForm.valid" class="btn btn-light"
+            (click)="signOut()">LogOut</button>
         </div>
       </form>
     </div>

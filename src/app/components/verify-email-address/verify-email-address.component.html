@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <h1>Thank You for Registering</h1>
+        <p>We have sent a confirmation email to: <b>{{userVerification.email}}</b></p>
+        <p>Please check your email and click on the link to verify your email address.</p>
+        <button class="btn btn-primary" (click)="resendVerificationEmail()">Resend Verification Email</button>
+        Go to: <button class="btn btn-primary" routerLink="/log-in">Log In</button>
+    </div>
+</div>

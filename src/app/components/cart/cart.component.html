@@ -8,7 +8,7 @@
                     <button class="btn btn-link" data-bs-toggle="collapse"
                         [attr.data-bs-target]="'#collapseOne'+cartItem.productId" aria-expanded="true"
                         aria-controls="collapseOne">
-                        {{cartItem.productName}}
+                        {{cartItem.productName}}<br><button >Remove</button>
                     </button>
                 </h5>
             </div>
@@ -30,8 +30,10 @@
     
     <div class="d-flex justify-content-end">
         <div>
-            <h3>TOTAL: {{totalPrice}}</h3> <br>
-            <button class="btn btn-primary" (click)="submitOrder()">SUBMIT</button>
+            <h3>Subtotal: {{totalPrice}}</h3> <br>
+            <h3>Shipping: {{totalPrice}}</h3> <br>
+            <hr>
+            <button class="btn btn-primary" (click)="submitOrder()">Checkout</button>
         </div>
     </div>
 </div>
