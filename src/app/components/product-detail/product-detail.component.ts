@@ -30,7 +30,7 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  addProductToCart() {
+  /*addProductToCart() {
       this._cartService.addToCart(this.productData).subscribe({
         next: (data) => {
           console.log(data);
@@ -39,5 +39,5 @@ export class ProductDetailComponent implements OnInit {
           console.log(err);
         }
       });
-    }
+    }*/
 }

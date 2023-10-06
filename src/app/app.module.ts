@@ -9,11 +9,10 @@ import { SocialBarComponent } from './components/social-bar/social-bar.component
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { AboutComponent } from './components/about/about.component';
-import { OrdersComponent } from './components/orders/orders.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -31,7 +30,6 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     LogInComponent,
     ProductDetailComponent,
     AboutComponent,
-    OrdersComponent,
     PaymentDetailsComponent,
     SignUpComponent,
     CartComponent
@@ -43,6 +41,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

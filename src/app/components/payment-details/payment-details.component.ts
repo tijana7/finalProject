@@ -25,13 +25,13 @@ export class PaymentDetailsComponent implements OnInit {
 
   buildForm(){
     this.paymentDetailForm = this._formBuilder.group({
-      "name": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
-      "surname": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
-      "address": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
-      // "payMethod": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
-      // "phone": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
+      "firstName": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
+      "lastName": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
       "email": new FormControl("", {validators: [Validators.required, Validators.email]}),
+      "phoneNumber": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
+      "address": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
       "comment": new FormControl(""),
+      "payMethod": new FormControl("", {validators: [Validators.required, Validators.minLength(5)]}),
     })
   }
 

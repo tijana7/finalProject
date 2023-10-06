@@ -1,0 +1,19 @@
+.form-control {
+    border-bottom: 2px solid #666699 !important;
+    border: none;
+    border-radius: 0 !important;
+}
+.display-css{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-style{
+    color: #fff;
+    background-color: #000;
+    margin-left: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

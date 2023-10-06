@@ -6,7 +6,6 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AboutComponent } from './components/about/about.component';
-import { OrdersComponent } from './components/orders/orders.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 import { CartComponent } from './components/cart/cart.component';
 
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'orders', component: OrdersComponent },
   { path: 'payment-details', component: PaymentDetailsComponent },
   { path: 'cart', component: CartComponent }
 ];

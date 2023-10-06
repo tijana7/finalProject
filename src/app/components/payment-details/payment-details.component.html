@@ -1,1 +1,58 @@
-<p>payment-details works!</p>
+<br><br><br><br>
+<div class="display-css">
+    <div class="col-4">
+            <form [formGroup]="paymentDetailForm" (ngSubmit)="send()" class="row g-3">
+                
+                <div class="col-12">
+                    <label for="firstName" class="form-label">First name <span style="color: red;">*</span></label>
+                    <input id="firstName" type="text" class="form-control no-radius-border" name="firstName"
+                        formControlName="firstName">
+                </div>
+
+                <div class="col-12">
+                    <label for="lastName" class="form-label">Last name<span style="color: red;">*</span></label>
+                    <input id="lastName" type="text" class="form-control no-radius-border" name="lastName"
+                        formControlName="lastName">
+                </div>
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email address<span style="color: red;">*</span></label>
+                    <input id="email" type="email" class="form-control no-radius-border" name="email"
+                        formControlName="email">
+                </div>
+
+                <div class="col-12">
+                    <label for="phoneNumber" class="form-label">Phone number<span style="color: red;">*</span></label>
+                    <input id="phoneNumber" type="text" class="form-control no-radius-border" name="phoneNumber"
+                        formControlName="phoneNumber">
+                </div>
+
+                <div class="col-12">
+                    <label for="address" class="form-label">Address<span style="color: red;">*</span></label>
+                    <input id="address" type="text" class="form-control no-radius-border" name="address"
+                        formControlName="address">
+                </div>
+
+                <div class="12">
+                    <label for="comment" class="form-label">Comment</label>
+                    <textarea id="comment" class="form-control no-radius-border" name="comment"
+                        formControlName="comment" rows="1"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <label for="paymentMethod" class="form-label">Payment Method<span
+                            style="color: red;">*</span></label>
+                    <select class="form-select form-select mb-3 form-control" aria-label="Large select example">
+                        <option selected value="1">Credit Card</option>
+                        <option value="2"> PayPal</option>
+                        <option value="3">Payment on Delivery</option>
+                    </select>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="button-style" type="submit">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
