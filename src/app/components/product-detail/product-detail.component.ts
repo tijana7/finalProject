@@ -11,8 +11,9 @@ import { ProductService } from 'src/app/services/productService';
 })
 
 export class ProductDetailComponent implements OnInit {
-  
+
   productData: Products;
+  isLoggedIn = false;
 
   constructor(
     private _productService: ProductService,
@@ -39,5 +40,10 @@ export class ProductDetailComponent implements OnInit {
           console.log(err);
         }
       });
+     
+})
+      }
     }*/
+
+    
 }

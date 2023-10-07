@@ -27,9 +27,7 @@ export class LogInComponent implements OnInit {
     this.authService.signIn(email, password);
   }
 
-  signOut(){
-    this.authService.signOut();
-  }
+  
 }
 
 

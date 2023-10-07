@@ -31,12 +31,11 @@
 
         <div class="d-grid gap-2">
 
-          <button type="submit" *ngIf="!isLogedIn" [disabled]="!logInForm.valid" class="btn btn-light"
+          <button type="submit" [disabled]="!logInForm.valid" class="btn btn-light"
             (click)="signIn(email.value, password.value); onSubmit()">Log In</button>
-          <button type="submit" *ngIf="isLogedIn" [disabled]="!logInForm.valid" class="btn btn-light"
-            (click)="signOut()">LogOut</button>
         </div>
       </form>
     </div>
   </div>
 </body>
+

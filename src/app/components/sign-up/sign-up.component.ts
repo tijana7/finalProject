@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/services/authService';
 export class SignUpComponent {
 
   @ViewChild('logInForm') singupForm: NgForm;
-  
+  currentUser: any;
 
   constructor(
     private authService: AuthService
@@ -27,6 +27,10 @@ export class SignUpComponent {
 
   signUp(email: string, password: string){
     this.authService.signUp(email, password);
+  }
+
+  sendVerificationMail(currentUser:any){
+    this.authService.sendVerificationMail(currentUser);
   }
 }
 

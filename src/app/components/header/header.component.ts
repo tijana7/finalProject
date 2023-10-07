@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faUserCircle, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/authService';
 import { CartService } from 'src/app/services/cartService';
+
 
 @Component({
   selector: 'app-header',
@@ -10,11 +12,13 @@ import { CartService } from 'src/app/services/cartService';
 export class HeaderComponent implements OnInit {
   faUser = faUserCircle;
   faCart=faShoppingCart;
+  isLogedIn = false;
   
   cartNumber: number = 0;
 
   constructor(
-    private _cartService: CartService
+    private _cartService: CartService,
+    private authService: AuthService
   ){}
 
   ngOnInit(): void {
@@ -27,5 +31,7 @@ export class HeaderComponent implements OnInit {
       }
     })
   }
-
+  signOut(){
+    this.authService.signOut();
+  }
 }

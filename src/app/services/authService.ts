@@ -57,7 +57,7 @@ export class AuthService {
         if (currentUser) {
             sendEmailVerification(currentUser)
                 .then(() => {
-                    this.router.navigate(['verify-email-address']);
+                    this.router.navigate(['']);
                 });
 
         }

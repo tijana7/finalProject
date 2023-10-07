@@ -15,16 +15,16 @@
       <a>Next &raquo;</a>
     </ul>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+  <div class="row justify-content-evenly">
+    <div class="col-lg-6 col-sm-12 text-center">
       <img class="rounded" [src]="productData.imgSrc" style="margin: auto;">
     </div>    
-    <div class="col-lg-4 col-md-12">
+    <div class="col-lg-6 col-sm-12">
       <h2>{{productData.name}}</h2>
       <h2>{{productData.price}} $</h2>
       <p>{{productData.description}}</p>
       <hr>
-      <div class="form-group col-md-2">
+      <div class="form-group col-md-3 col-sm-3">
       <label for="quantity">Quantity</label>
       <input class="form-control" name="quantity" id="quantity" type="number" min="1" max="99">
     </div>
@@ -32,6 +32,23 @@
 
       <button class="btn btn-dark" style="margin-top: 3px;" >Add to cart</button>
       <br><br><br>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="border: 1px solid black" *ngIf="!isLoggedIn">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel" style="border: none;">WE WANT TO MEET YOU</h1>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">Please, Login to continue enyoying shopping on our site.</h4>
+      </div>
+      <div class="modal-footer" style="border: none;">
+        <button type="button" class="btn btn-dark"  routerLink="/log-in">Log in</button>
+      </div>
     </div>
   </div>
 </div>

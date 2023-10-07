@@ -47,7 +47,7 @@
                 </h6>
 
                 <div class="d-grid gap-2">
-                    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-light" (click)="signUp(email.value, password.value); onSubmit()">Sign In</button>
+                    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-light" (click)="signUp(email.value, password.value); onSubmit()" data-bs-target="#myModal">Sign In</button>
                     <h6>Already a member? <a style="text-decoration: underline;color: black;" routerLink="/log-in">Log
                             In</a></h6>
                 </div>
@@ -55,3 +55,22 @@
         </div>
     </div>
 </body>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel" style="border: none;">Thank You for Registering</h1>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-center">We have sent a confirmation email to your email.</h4>
+          <h4 class="text-center">Check your email and click on the link to verify your email address.</h4>
+        </div>
+        <div class="modal-footer" style="border: none;">
+          <button type="button" class="btn btn-dark" (click)="sendVerificationMail(currentUser)">Resend Verification Email</button>
+          <button type="button" class="btn btn-dark" routerLink="/log-in">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>

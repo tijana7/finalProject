@@ -39,15 +39,7 @@ ul.breadcrumb {
     padding: 10px; 
   }
 
-@media (max-width: 767px) {
-  .col-lg-4 {
-    width: 100%; 
-  }
-  .col-lg-4 img {
-    max-width: 100%;
-    height: auto; 
-  }
-}
+
 
 
  

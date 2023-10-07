@@ -18,8 +18,7 @@
                         <a class="nav-link" routerLink="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="/products"
-                            class="nav-link" href="#">Shop</a>
+                        <a routerLink="/products" class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -29,7 +28,8 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#"><fa-icon class="fa-1x"
                                 [icon]="faUser"></fa-icon></a></li>
-                    <li class="nav-item"><a class="nav-link active" routerLink="/log-in">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" routerLink="/log-in">LogIn</a></li>
+                    <li class="nav-item" *ngIf="isLogedIn" (click)="signOut()"><a class="nav-link active" routerLink="">LogOut</a></li>
                     <li class="nav-item"><a class="nav-link active" routerLink="/cart"><fa-icon class="fa-1x"
                                 [icon]="faCart"></fa-icon><span
                                 class="badge rounded-pill badge-notification bg-secondary"
